@@ -1,0 +1,386 @@
+.contact {
+  position: relative;
+  background: var(--bg);
+  border-top: 1px solid rgba(17, 17, 17, .04);
+}
+
+.contact__inner {
+  position: relative;
+  z-index: 1;
+  padding-top: 3%;
+}
+
+.contact__head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact__eyebrow {
+  font-size: 11px;
+  letter-spacing: .28em;
+  color: rgba(17, 17, 17, .42);
+  margin-bottom: 10px;
+}
+
+.contact__title {
+  font-family: var(--serif);
+  font-size: 34px;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.contact__subtitle {
+  max-width: 720px;
+  margin: 10px auto 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(17, 17, 17, .56);
+}
+
+/* Grid - ortalanmış ve daha simetrik */
+.contact__grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: minmax(320px, 520px) minmax(320px, 520px);
+  justify-content: center;
+  /* iki kolonun tümünü sayfanın ortasına alır */
+  column-gap: 90px;
+  /* simetri ve nefes */
+  align-items: start;
+}
+
+.contact__block {
+  padding: 10px 4px;
+}
+
+.contact__block--center {
+  text-align: end;
+}
+
+.contact__label {
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(17, 17, 17, .42);
+  margin-bottom: 12px;
+}
+
+/* Big email link */
+.contactLink {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.contact__block--center .contactLink {
+  margin: 0 auto;
+}
+
+.contactLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, .18);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.contactLink:hover::after {
+  transform: scaleX(1);
+}
+
+/* Big fade text */
+.contactFade {
+  font-family: var(--serif);
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  background: linear-gradient(90deg,
+      rgba(17, 17, 17, 1) 0%,
+      rgba(17, 17, 17, 1) 60%,
+      rgba(17, 17, 17, .55) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Actions */
+.contact__actions {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(17, 17, 17, .50);
+  font-size: 13px;
+}
+
+.contact__block--center .contact__actions {
+  justify-content: end;
+}
+
+.contactBtn {
+  border: 1px solid rgba(17, 17, 17, .10);
+  background: transparent;
+  padding: 7px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  color: rgba(17, 17, 17, .70);
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.contactBtn:hover {
+  border-color: rgba(17, 17, 17, .18);
+  background: rgba(17, 17, 17, .03);
+  color: rgba(17, 17, 17, .90);
+}
+
+.contact__sep {
+  color: rgba(17, 17, 17, .28);
+}
+
+/* Small links */
+.contactMiniLink {
+  position: relative;
+  text-decoration: none;
+  color: rgba(17, 17, 17, .66);
+  transition: color 180ms ease;
+}
+
+.contactMiniLink:hover {
+  color: rgba(17, 17, 17, .92);
+}
+
+.contactMiniLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, .16);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.contactMiniLink:hover::after {
+  transform: scaleX(1);
+}
+
+/* CV row (mail altı, ayrı satır) */
+.contact__rowLink {
+  margin-top: 14px;
+}
+
+.contactRowLink {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.contactRowLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, .18);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.contactRowLink:hover::after {
+  transform: scaleX(1);
+}
+
+.contactRowFade {
+  font-family: var(--serif);
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  background: linear-gradient(90deg,
+      rgba(17, 17, 17, 1) 0%,
+      rgba(17, 17, 17, 1) 60%,
+      rgba(17, 17, 17, .55) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contactRowHint {
+  font-size: 12px;
+  color: rgba(17, 17, 17, .45);
+}
+
+/* Row links list */
+.contact__links {
+  display: grid;
+  gap: 12px;
+  width: 40%;
+}
+
+@media (max-width: 900px) {
+  .contact__links {
+    width: 100%;
+  }
+}
+
+.contactMiniLink--row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 8px 0;
+}
+
+.contactMiniFade {
+  font-family: var(--serif);
+  letter-spacing: -0.01em;
+  background: linear-gradient(90deg,
+      rgba(17, 17, 17, 1) 0%,
+      rgba(17, 17, 17, 1) 60%,
+      rgba(17, 17, 17, .55) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact__arrow {
+  color: rgba(17, 17, 17, .32);
+  transform: translateY(-1px);
+}
+
+.contact__note {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(17, 17, 17, .52);
+  max-width: 520px;
+  /* sağ blok çok uzayıp denge bozmasın */
+}
+
+.contact__micro {
+  margin-top: 12px;
+  font-size: 12px;
+  color: rgba(17, 17, 17, .46);
+}
+
+/* Footer line */
+.contact__footer {
+  margin-top: 42px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(17, 17, 17, .08);
+  text-align: center;
+}
+
+.contact__footerText {
+  font-size: 12px;
+  color: rgba(17, 17, 17, .45);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+    column-gap: 0;
+    row-gap: 26px;
+  }
+
+  .contact__block,
+  .contact__block--center {
+    text-align: center;
+  }
+
+  .contact__block--center .contact__actions {
+    justify-content: center;
+  }
+
+  .contact__links {
+    width: 100%;
+    margin: 0 auto;
+    /* ortalamayı garantilemek için */
+  }
+
+  .contactMiniLink--row {
+    justify-content: center;
+    /* Kenarlara yayılmasın, ortada dursun */
+    padding: 6px 0;
+    /* biraz daha sıkı olabilir */
+  }
+
+  /* Ok işaretini metnin biraz yanına alalım, çok uzak kalmasın */
+  .contact__arrow {
+    margin-left: 8px;
+  }
+
+  .contact__note {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 640px) {
+  .contact__title {
+    font-size: 40px;
+  }
+
+  .contactFade {
+    font-size: 24px;
+  }
+}
+
+/* =========================
+   FOOTER ONLY GRID
+========================= */
+
+.contactGrid__footer {
+  position: relative;
+  margin-top: 56px;
+  padding: 28px 0;
+  margin-bottom: 3%;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(17, 17, 17, .45);
+  border-top: 1px solid rgba(17, 17, 17, .08);
+
+  overflow: hidden;
+  /* grid taşmasını engeller */
+}
+
+/* GRID SADECE BU SATIRDA */
+.contactGrid__footer--grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(to right, rgba(17, 17, 17, .06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, .06) 1px, transparent 1px);
+
+  background-size: 42px 42px;
+  opacity: 100%;
+
+  /* sadece ortada yumuşak görünüm */
+  mask-image: radial-gradient(circle at 50% 50%,
+      rgba(0, 0, 0, .9) 0%,
+      rgba(0, 0, 0, .45) 55%,
+      rgba(0, 0, 0, 0) 85%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%,
+      rgba(0, 0, 0, .9) 0%,
+      rgba(0, 0, 0, .45) 55%,
+      rgba(0, 0, 0, 0) 85%);
+}
+
+/* Yazı gridin üstünde kalsın */
+.contactGrid__footer--grid {
+  position: relative;
+  z-index: 1;
+}

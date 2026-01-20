@@ -1,0 +1,138 @@
+.bsaPage{
+  position: relative;
+  padding: 40px 0 80px;
+}
+
+.bsaPage__inner{
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.bsaPage__head{
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.bsaPage__eyebrow{
+  font-size: 11px;
+  letter-spacing: .28em;
+  color: rgba(17,17,17,.42);
+  margin-bottom: 10px;
+}
+
+.bsaPage__title{
+  font-family: var(--serif);
+  font-size: 40px;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.bsaPage__subtitle{
+  max-width: 860px;
+  margin: 10px auto 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(17,17,17,.56);
+}
+
+/* Filters */
+.bsaPage__filters{
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.bsaFilterBtn{
+  border: 1px solid rgba(17,17,17,.10);
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.bsaFilterBtn:hover{
+  border-color: rgba(17,17,17,.18);
+  background: rgba(17,17,17,.03);
+}
+
+.bsaFilterBtn.is-active{
+  border-color: rgba(17,17,17,.22);
+  background: rgba(17,17,17,.04);
+}
+
+.bsaFilterLabel{
+  font-family: var(--serif);
+  font-size: 13px;
+  color: rgba(17,17,17,.72);
+}
+
+/* List (reuse bsa row styles from bsa.css) */
+.bsaPage__list{
+  margin-top: 22px;
+  display: grid;
+  gap: 14px;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bsaPage__foot{
+  margin-top: 22px;
+  text-align: center;
+}
+
+.bsaPage__footText{
+  font-size: 13px;
+  color: rgba(17,17,17,.52);
+}
+
+/* ===========================
+   BSA PAGE HEADER GRID PATCH
+   (SADECE bsaPage__head içinde)
+   =========================== */
+
+.bsaPage__head{
+  position: relative;
+  overflow: hidden; /* grid dışarı taşmasın */
+}
+
+/* grid layer */
+.bsaPage__grid{
+  position: absolute;
+  inset: -80px 0 auto 0; /* grid üstten biraz taşsın, premium gibi */
+  height: 360px;         /* sadece başlık alanını kapsasın */
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    linear-gradient(to right, rgba(17,17,17,.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17,17,17,.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+  background-position: center;
+
+  opacity: 0.8;
+
+  /* yumuşak fade: aşağı doğru kaybolur */
+  mask-image: radial-gradient(circle at 50% 18%,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,.68) 52%,
+    rgba(0,0,0,.22) 72%,
+    rgba(0,0,0,0) 92%
+  );
+  -webkit-mask-image: radial-gradient(circle at 50% 18%,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,.68) 52%,
+    rgba(0,0,0,.22) 72%,
+    rgba(0,0,0,0) 92%
+  );
+}
+
+/* bsaPage__head içindeki tüm içerik gridin üstünde kalsın */
+.bsaPage__head > *:not(.bsaPage__grid){
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,321 @@
+.cases {
+  position: relative;
+  padding: 0px 0 76px;
+}
+
+.cases__inner {
+  max-width: 1240px;
+  /* WIDE */
+  margin: 0 auto;
+  padding: 0 28px;
+  /* biraz daha nefes */
+}
+
+.cases__heading {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.cases__eyebrow {
+  font-size: 11px;
+  letter-spacing: .28em;
+  color: rgba(17, 17, 17, .42);
+  margin-bottom: 10px;
+}
+
+.cases__title {
+  font-family: var(--serif);
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.cases__subtitle {
+  max-width: 720px;
+  margin: 10px auto 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(17, 17, 17, .56);
+}
+
+/* Minimal list */
+.cases__list {
+  margin-top: 26px;
+  display: grid;
+  gap: 16px;
+}
+
+/* “kartsız ama tıklanabilir” satır */
+.casesRow {
+  display: block;
+  padding: 10px 4px;
+  border-radius: 12px;
+  transition: background 180ms ease;
+}
+
+.casesRow:hover {
+  background: rgba(17, 17, 17, .03);
+}
+
+.casesRow__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.casesRow__arrow {
+  color: rgba(17, 17, 17, .35);
+  transform: translateY(-1px);
+}
+
+.casesRow__desc {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(17, 17, 17, .56);
+}
+
+/* CASES link effect — header’dan tamamen bağımsız */
+.casesLink {
+  position: relative;
+  display: inline-block;
+}
+
+.casesLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, .16);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.casesRow:hover .casesLink::after {
+  transform: scaleX(1);
+}
+
+/* CASES fade effect — global serif-fade’e benzer ama farklı class */
+.casesFade {
+  font-family: var(--serif);
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  background: linear-gradient(90deg,
+      rgba(17, 17, 17, 1) 0%,
+      rgba(17, 17, 17, 1) 60%,
+      rgba(17, 17, 17, .55) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Divider */
+.cases__divider {
+  height: 1px;
+  background: rgba(17, 17, 17, .08);
+  width: 100%;
+  max-width: 980px;
+  /* WIDE */
+  margin: 28px auto 18px;
+}
+
+/* Switch (Web/Data) */
+.switch {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.switch__btn {
+  border: 1px solid rgba(17, 17, 17, .10);
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.switch__btn:hover {
+  border-color: rgba(17, 17, 17, .18);
+  background: rgba(17, 17, 17, .03);
+}
+
+.switch__btn.is-active {
+  border-color: rgba(46, 125, 50, .45);
+  /* Greenish border */
+  background: rgba(46, 125, 50, .04);
+  /* Greenish hue */
+  color: #1b5e20;
+  /* Darker green text */
+}
+
+.switch__label {
+  font-family: var(--serif);
+  font-size: 14px;
+  color: rgba(17, 17, 17, .72);
+}
+
+/* Body */
+.switch__body {
+  margin-top: 16px;
+  max-width: 980px;
+  /* WIDE */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mini list (Web/Data items) */
+.cases__miniList {
+  display: grid;
+  gap: 14px;
+}
+
+.miniRow {
+  display: block;
+  padding: 10px 4px;
+  border-radius: 12px;
+  transition: background 180ms ease;
+}
+
+.miniRow:hover {
+  background: rgba(17, 17, 17, .03);
+}
+
+.miniRow__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: baseline;
+}
+
+.miniRow__hint {
+  font-size: 11px;
+  letter-spacing: .18em;
+  color: rgba(17, 17, 17, .35);
+  text-transform: uppercase;
+}
+
+.miniRow__desc {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(17, 17, 17, .56);
+}
+
+/* Mini link underline — header’dan bağımsız */
+.miniLink {
+  position: relative;
+  display: inline-block;
+}
+
+.miniLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, .16);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.miniRow:hover .miniLink::after {
+  transform: scaleX(1);
+}
+
+.miniFade {
+  font-family: var(--serif);
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  background: linear-gradient(90deg,
+      rgba(17, 17, 17, 1) 0%,
+      rgba(17, 17, 17, 1) 60%,
+      rgba(17, 17, 17, .55) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Note */
+.casesNote {
+  margin: 16px 4px 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(17, 17, 17, .52);
+  text-align: center;
+}
+
+.casesNote__link {
+  position: relative;
+  color: rgba(17, 17, 17, .72);
+  transition: color 180ms ease;
+}
+
+.casesNote__link:hover {
+  color: rgba(17, 17, 17, .92);
+}
+
+.casesNote__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, .18);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.casesNote__link:hover::after {
+  transform: scaleX(1);
+}
+
+@media (min-width: 640px) {
+  .cases__title {
+    font-size: 36px;
+  }
+
+  .casesFade {
+    font-size: 22px;
+  }
+
+  .miniFade {
+    font-size: 20px;
+  }
+}
+
+/* ===== motif position override (CASES) ===== */
+.cases .motifPatch--left {
+  top: 37%;
+  opacity: 0.8;
+  width: 60%;
+  left: 0%;
+}
+
+.cases .motifPatch--right {
+  top: 220px;
+  opacity: 0;
+}
+
+.cases .motifPatch--center {
+  top: 220px;
+  opacity: 0;
+}
+
+@media (max-width: 600px) {
+
+  .casesRow__top,
+  .miniRow__top {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}

@@ -1,0 +1,271 @@
+.bsa {
+  position: relative;
+  padding: 25px 0 92px;
+}
+
+.bsa__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.bsa__head {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.bsa__eyebrow {
+  font-size: 11px;
+  letter-spacing: .28em;
+  color: rgba(17, 17, 17, .42);
+  margin-bottom: 10px;
+}
+
+.bsa__title {
+  font-family: var(--serif);
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.bsa__subtitle {
+  max-width: 820px;
+  margin: 10px auto 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(17, 17, 17, .56);
+}
+
+/* actions (editorial) */
+.bsa__actions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 13px;
+  color: rgba(17, 17, 17, .50);
+}
+
+.bsa__dot {
+  color: rgba(17, 17, 17, .26);
+}
+
+/* separate link style (NOT header/cases) */
+.bsaActionLink {
+  position: relative;
+  text-decoration: none;
+  color: rgba(17, 17, 17, .72);
+  transition: color 180ms ease;
+}
+
+.bsaActionLink:hover {
+  color: rgba(17, 17, 17, .92);
+}
+
+.bsaActionLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, .18);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.bsaActionLink:hover::after {
+  transform: scaleX(1);
+}
+
+.bsaActionFade {
+  font-family: var(--serif);
+  letter-spacing: -0.01em;
+  background: linear-gradient(90deg,
+      rgba(17, 17, 17, 1) 0%,
+      rgba(17, 17, 17, 1) 60%,
+      rgba(17, 17, 17, .55) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* list */
+.bsa__list {
+  margin-top: 22px;
+  display: grid;
+  gap: 12px;
+  max-width: 980px;
+  /* editorial yoğunluk */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* row: minimal, not a card */
+.bsaRow {
+  display: block;
+  padding: 14px 10px;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: background 180ms ease;
+  border-bottom: 1px solid rgba(17, 17, 17, .12);
+}
+
+.bsaRow:hover {
+  background: rgba(17, 17, 17, .03);
+}
+
+.bsaRow__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(17, 17, 17, .40);
+}
+
+.bsaMetaSep {
+  color: rgba(17, 17, 17, .24);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.bsaMetaText {
+  letter-spacing: .12em;
+}
+
+/* tag */
+.bsaTag {
+  border: 1px solid rgba(17, 17, 17, .10);
+  border-radius: 999px;
+  padding: 6px 10px;
+  letter-spacing: .14em;
+  color: rgba(17, 17, 17, .52);
+  background: rgba(17, 17, 17, .02);
+}
+
+.bsaRow__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.bsaRow__arrow {
+  color: rgba(17, 17, 17, .32);
+  transform: translateY(-1px);
+}
+
+.bsaRow__excerpt {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(17, 17, 17, .56);
+  max-width: 820px;
+}
+
+/* underline only on hover, separate from other sections */
+.bsaLink {
+  position: relative;
+  display: inline-block;
+}
+
+.bsaLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, .16);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.bsaRow:hover .bsaLink::after {
+  transform: scaleX(1);
+}
+
+/* fade title */
+.bsaFade {
+  font-family: var(--serif);
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  background: linear-gradient(90deg,
+      rgba(17, 17, 17, 1) 0%,
+      rgba(17, 17, 17, 1) 60%,
+      rgba(17, 17, 17, .55) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* note */
+.bsa__note {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(17, 17, 17, .52);
+}
+
+.bsaNoteLink {
+  position: relative;
+  color: rgba(17, 17, 17, .72);
+  text-decoration: none;
+}
+
+.bsaNoteLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background: rgba(17, 17, 17, .18);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.bsaNoteLink:hover::after {
+  transform: scaleX(1);
+}
+
+@media (min-width: 640px) {
+  .bsa__title {
+    font-size: 38px;
+  }
+
+  .bsaFade {
+    font-size: 22px;
+  }
+}
+
+.bsa__divider1 {
+  width: 80%;
+  height: 1px;
+  border: none;
+  background: rgba(17, 17, 17, .12);
+  margin-bottom: 16px;
+}
+
+/* ===== motif position override (BSA) ===== */
+.bsa .motifPatch--left {
+  top: 70px;
+  opacity: 0;
+}
+
+.bsa .motifPatch--right {
+  top: 300px;
+  opacity: 0;
+}
+
+.bsa .motifPatch--center {
+  top: 620px;
+}
