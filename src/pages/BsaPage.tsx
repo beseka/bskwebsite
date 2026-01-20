@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { BSA_POSTS } from "../data/bsaPosts";
-import "../styles/bsaPage.css";
+import "../styles/bsapage.css";
 
 type Tag = "All" | "Analysis" | "Model" | "Product";
 
@@ -27,7 +27,7 @@ export default function BsaPage() {
           </p>
 
           <div className="bsaPage__filters" role="tablist" aria-label="BSA filtreleri">
-            {(["All", "Analysis", "Model","Product"] as Tag[]).map((t) => (
+            {(["All", "Analysis", "Model", "Product"] as Tag[]).map((t) => (
               <button
                 key={t}
                 type="button"
