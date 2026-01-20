@@ -52,7 +52,11 @@ export default function Cases() {
           <div className="cases__eyebrow">SELECTED PROJECTS  </div>
           <h2 className="cases__title">Cases</h2>
           <p className="cases__subtitle">
-            Çalışmalarımdan ve projelerimden bazılarını buradan inceleyebilirsiniz. Daha Fazlası için GitHub ve CV'mi inceleyebilirsiniz.
+            Çalışmalarımdan ve projelerimden bazılarını buradan inceleyebilirsiniz. Daha Fazlası için GitHub ve{" "}
+            <a href="#iletisim" className="text-inherit underline decoration-dotted underline-offset-4 hover:opacity-80 transition-opacity">
+              CV'mi
+            </a>{" "}
+            inceleyebilirsiniz.
           </p>
         </div>
 

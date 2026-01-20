@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import "../styles/contact.css";
 
 export default function Contact() {
-  const email = "bsirhatk@gmail.com"; 
-  const cvHref = "/cv.pdf";
+  const email = "bsirhatk@gmail.com";
+  const cvHref = "/barışserhatkaplan_resume.pdf";
 
   const links = useMemo(
     () => [
